@@ -11,7 +11,7 @@ const BookList = () => {
 
     //Fetch data from back-end
     const fetchBooks = () => {
-        axios.get(`${import.meta.env.VITE_API_LOCAL_URL}/api/v1/book`)
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/v1/book`)
             .then(response => {
                 // Check if the response data is an array
                 if (Array.isArray(response.data)) {
@@ -34,7 +34,7 @@ const BookList = () => {
 
     //Handle delete click
     const handleDelete = (book) => {
-        axios.delete(`${import.meta.env.VITE_API_LOCAL_URL}/api/v1/book/${book.id}`)
+        axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/v1/book/${book.id}`)
             .then(response => {
                 console.log("Data", response.data);
                 fetchBooks();

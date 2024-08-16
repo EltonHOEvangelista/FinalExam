@@ -16,7 +16,7 @@ const UpdateBook = () => {
     
     //fecth data from back-end
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_API_LOCAL_URL}/api/v1/book/${id}`)
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/v1/book/${id}`)
             .then(response => {
                 setBook(response.data);
             })
@@ -36,7 +36,7 @@ const UpdateBook = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.put(`${import.meta.env.VITE_API_LOCAL_URL}/api/v1/book/${id}`, book)
+        axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/v1/book/${id}`, book)
         .then(response => {
           console.log('Book updated: ', response.data);
         })

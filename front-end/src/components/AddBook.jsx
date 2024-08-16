@@ -26,7 +26,7 @@ const AddBook = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.post(`${import.meta.env.VITE_API_LOCAL_URL}/api/v1/book/add`, addBook)
+        axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/book/add`, addBook)
         .then(response => {
           console.log('Book added: ', response.data);
         })
