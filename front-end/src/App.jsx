@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import AddBook from "./components/AddBook.jsx";
 import ListBook from "./components/BookList.jsx";
 import UpdateBook from "./components/UpdateBook.jsx";
+import Root from "./components/Root.jsx";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/api/v1/book" element={< ListBook/>} />
         <Route path="/api/v1/book/add" element={< AddBook/>} />
         <Route path="/api/v1/book/:id" element={< UpdateBook/>} />
+        <Route path="/" element={< Root/>} />
       </Routes>
     </div>
   )
