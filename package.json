@@ -1,0 +1,20 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-concurrently": "npm install concurrently --save-dev",
+    "install-client": "cd front-end && npm install axios react-router-dom bootstrap",
+    "install-server": "cd back-end && npm install express mongoose nodemon cors dotenv axios",
+    "install": "npm run install-concurrently && npm run install-client && npm run install-server",
+    "build-client": "cd front-end && npm run build",
+    "build-server": "cd back-end && npm run build",
+    "build": "npm run build-client && npm run build-server",
+    "start-client": "cd front-end && npm run dev",
+    "start-server": "cd back-end && npm start",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
