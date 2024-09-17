@@ -95,7 +95,7 @@ git status
 //MongoDB
 -------------------------------------------------------------------------------
 CLoud:
-mongodb: eltonevangelista@icloud.com  Vancouver@2024
+mongodb: eltonevangelista@icloud.com  V2024
 DB_URI=mongodb+srv://quiz02:project%402024@cluster0.pzf1d2h.mongodb.net/finalExam
 Local:
 mongodb://localhost:27017/
@@ -160,7 +160,7 @@ const response = await axios.get('https://api.unsplash.com/photos/random/', {
 
 GitHub
 EltonHOEvangelista
-OL2024
+OL24
 
 Bootstrap
 client: npm install bootstrap
